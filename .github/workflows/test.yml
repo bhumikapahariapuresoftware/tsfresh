@@ -129,7 +129,7 @@ jobs:
               conda activate && \
               conda install -q -y pip wheel setuptools && \              
               apt-get -y install python3-numpy python3-scipy python3-statsmodels && \
-              pip3 install pandas scikit-learn dask[dataframe] distributed requests patsy psutil tqdm matrixprofile stumpy cloudpickle Sphinx docutils b2luigi sphinx_rtd_theme && \
+              pip3 install pandas scikit-learn dask[dataframe] distributed requests patsy psutil tqdm matrixprofile stumpy cloudpickle Sphinx docutils b2luigi sphinx_rtd_theme pytest && \
               pip3 install -r test-requirements.txt && \
               pytest --junitxml=junit/test-results-3.8-highest.xml --cov-report=xml tests && \
               conda deactivate'
